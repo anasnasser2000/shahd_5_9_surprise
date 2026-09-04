@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5/9 ❤️ حكايتنا</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="hearts">
+<span>❤️</span><span>💕</span><span>💗</span><span>💖</span>
+<span>❤️</span><span>💘</span><span>💕</span><span>💗</span>
+</div>
+
+<main class="container">
+
+<audio id="bgMusic" loop>
+    <source src="/static/romantic.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn" onclick="toggleMusic()">🔊</button>
+
+<section id="lockScreen">
+    <div class="top-heart">🔐</div>
+    <p class="small-title">عندي ليك مفاجأة صغيرة...</p>
+    <h1>5 / 9 ❤️</h1>
+    <h2>لكن قبل ما تبدأ الحكاية...</h2>
+
+    <p class="intro">
+        فيه حاجة وحدة بس تعرفيها<br>
+        وتقدري تدخلي بيها ❤️
+    </p>
+
+    <div class="password-box">
+        <input id="secretPassword" type="password" placeholder="اكتبي السر هنا..." autocomplete="off">
+        <button class="start-btn" onclick="unlock()">🔓 افتحي المفاجأة</button>
+        <p id="wrongPassword"></p>
+    </div>
+</section>
+
+<section id="home" style="display:none">
+<div class="top-heart">❤️</div>
+<p class="small-title">إلى شخصي المفضل...</p>
+<h1>5 / 9</h1>
+<h2>اليوم اللي بدت فيه حكايتنا ❤️</h2>
+
+<p class="intro">
+يوم عادي في التاريخ...<br>
+لكنه بالنسبة ليا كان بداية أجمل حكاية ❤️
+</p>
+
+<div class="counter-box">
+<div class="counter-title">⏳ وكل يوم يعدّي...</div>
+
+<div class="counter">
+<div><strong id="days">0</strong><span>يوم</span></div>
+<div><strong id="hours">0</strong><span>ساعة</span></div>
+<div><strong id="minutes">0</strong><span>دقيقة</span></div>
+<div><strong id="seconds">0</strong><span>ثانية</span></div>
+</div>
+
+<p>من أول يوم بدت فيه حكايتنا ❤️</p>
+</div>
+
+<button class="start-btn" onclick="startJourney()">
+✨ ابدئي رحلتنا
+</button>
+
+<div class="hint">
+🎵 📸 💬 🥹 ❤️
+</div>
+</section>
+
+
+<section id="journey" style="display:none">
+
+<div class="top-heart">💗</div>
+
+<p class="small-title">رحلتنا تبدأ من هنا...</p>
+
+<h1 class="journey-title">حكايتنا ❤️</h1>
+
+<div class="love-note">
+    <span>💌</span>
+    <p>كل محطة مخبية فيها ذكرى...</p>
+    <small>خدي وقتك، وافتحيهم وحدة وحدة ❤️</small>
+</div>
+
+<div class="journey-line"></div>
+<div class="stages">
+
+<a class="stage" href="https://drive.google.com/drive/folders/19WOkfF65lCLgUeOiMzDKs7OfcUji_Wqx" target="_blank">
+<div class="stage-number">01</div><div class="stage-icon">🎵</div>
+<div>
+<strong>أغاني تخصنا</strong>
+<span>الأغاني اللي تذكرنا ببعض 🎶</span>
+</div>
+</a>
+
+<a class="stage" href="https://drive.google.com/drive/folders/11_GA_b7VrqoGwc6xW8JTMrCZsJR7IBEq" target="_blank">
+<div class="stage-number">02</div><div class="stage-icon">🌍</div>
+<div>
+<strong>أرض الواقع</strong>
+<span>ذكرياتنا في الواقع 📸</span>
+</div>
+</a>
+
+<a class="stage" href="https://drive.google.com/drive/folders/1KiApbJVJu17A8CGFOMEbABF20yuo2VVb" target="_blank">
+<div class="stage-number">03</div><div class="stage-icon">🔥</div>
+<div>
+<strong>ترنداتنا</strong>
+<span>الحاجات اللي درناها مع بعض 😂❤️</span>
+</div>
+</a>
+
+<a class="stage" href="https://drive.google.com/drive/folders/1WCO0CKKW5dke3xuxPav3AXfEr7cahE2X" target="_blank">
+<div class="stage-number">04</div><div class="stage-icon">💬</div>
+<div>
+<strong>هدرزتنا وذكرياتنا</strong>
+<span>كلامنا وضحكنا وكل التفاصيل 🥹</span>
+</div>
+</a>
+
+<a class="stage" href="https://drive.google.com/drive/folders/1uxkoX3JRb3z2P7WMeUXoprg0vZCE3jgi" target="_blank">
+<div class="stage-number">05</div><div class="stage-icon">🥹</div>
+<div>
+<strong>أول أيام بيناتنا</strong>
+<span>من وين بدت الحكاية ❤️</span>
+</div>
+</a>
+
+</div>
+
+<button class="finish-btn" onclick="startQuestions()">
+    🥹 وصلت للنهاية... ❤️
+</button>
+
+<button class="back-btn" onclick="backHome()">↩️ رجوع</button>
+
+</section>
+
+<section id="ending" style="display:none">
+
+    <div class="ending-heart">❤️</div>
+
+    <p class="small-title">وهنا توصلنا لآخر محطة...</p>
+
+    <h1 class="ending-title">لكن مش آخر الحكاية 🥹</h1>
+
+    <div class="letter">
+        <p>
+            شهد... ❤️
+        </p>
+
+        <p>
+            يمكن قدرت نجمعلك شوية من ذكرياتنا
+            في مكان واحد، لكن الحقيقة إن أجمل
+            الذكريات هي اللي عشناها مع بعض.
+        </p>
+
+        <p>
+            من أول يوم بدت فيه حكايتنا،
+            لكل ضحكة، لكل هدرزة، لكل موقف،
+            وكل لحظة خلتني نتمسك بيك أكثر...
+        </p>
+
+        <p>
+            <strong>
+                شكراً لأنك كنتِ جزء من أجمل أيامي. ❤️
+            </strong>
+        </p>
+
+        <p>
+            وإن شاء الله 5/9 مش مجرد تاريخ نتذكروه،
+            إن شاء الله يكون تاريخ نحتفلوا بيه
+            كل سنة وإحنا مع بعض. 🥹❤️
+        </p>
+
+        <div class="forever">
+            5 / 9 ❤️<br>
+            <small>بداية حكايتنا...</small>
+        </div>
+    </div>
+
+    <button class="again-btn" onclick="backToJourney()">
+        🔄 نرجع نعيشها من جديد
+    </button>
+
+</section>
+
+</main>
+
+<script src="/static/script.js"></script>
+<section id="questions" style="display:none">
+
+    <div class="question-heart">💗</div>
+
+    <p class="small-title">خلينا نختبر ذاكرتك شوية... 🥹</p>
+
+    <h1 class="question-title">أسئلة من حكايتنا ❤️</h1>
+
+    <div class="progress-box">
+        <div class="progress-text">
+            <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+    <div class="question-card">
+
+        <div class="question-icon">💌</div>
+
+        <h2 id="questionText">السؤال هنا...</h2>
+
+        <textarea
+            id="answerInput"
+            placeholder="اكتبي إجابتك هنا... ❤️"
+            rows="4"
+        ></textarea>
+
+        <button class="question-btn" onclick="nextQuestion()">
+            كمّلي ❤️
+        </button>
+
+    </div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7b6c9">
+    <title>إلى شهد ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="floating-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+    </div>
+
+    <main class="card">
+
+        <div class="heart">❤️</div>
+
+        <p class="to">إلى أ. شهد المزوغي</p>
+
+        <h1>عندي حاجة صغيرة ليك...</h1>
+
+        <p class="intro">
+            مش مجرد موقع، ومش مجرد صور...
+            هذي حكاية بدأت في
+            <strong>5/9/2024 الساعة 9:05م</strong>
+            وحبيت نرجعها معاك من أول صفحة. ❤️
+        </p>
+
+        <section id="lockScreen" class="lock-screen">
+
+            <div class="lock-icon">🔐</div>
+
+            <h2>المفاجأة مقفولة</h2>
+
+            <p>لو تعرفي كلمة السر، تقدري تفتحي الحكاية...</p>
+
+            <input
+                id="password"
+                type="password"
+                inputmode="numeric"
+                maxlength="6"
+                placeholder="كلمة السر"
+                autocomplete="off"
+            >
+
+            <button onclick="unlock()">
+                افتحي المفاجأة ❤️
+            </button>
+
+            <p id="error"></p>
+
+        </section>
+
+        <section id="startScreen" class="start-screen hidden">
+
+            <div class="sparkle">✨</div>
+
+            <h2>عرفتيها ❤️</h2>
+
+            <p>
+                توا نقدروا نبدأوا الرحلة...
+                رحلة عامين من الذكريات.
+            </p>
+
+            <button onclick="startJourney()">
+                ابدئي الرحلة ❤️
+            </button>
+
+        </section>
+
+        <p class="from">من انس إلى شهد ❤️</p>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
